@@ -2,12 +2,18 @@ const { parse } = require('url');
 const { join } = require('path');
 
 module.exports = app => {
-  app.serverUse(async (req, res) => {
-    const parsedUrl = parse(req.url, true);
+  const dir = app.config.server.dir;
+  const dist = app.config.build.distDir;
+
+  app.use(function* (next) {
+    const parsedUrl = parse(ctx.req.url, true);
     const { pathname } = parsedUrl;
+
     if (pathname === '/service-worker.js') {
-      const filePath = join(__dirname, '.avet', pathname);
-      await app.serverStatic(req, res, filePath);
+      const filePath = join(dir, dist, pathname);
+      yield app.serverStatic(ctx, filePath);
+    } else {
+      yield next;
     }
   });
 }

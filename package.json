@@ -19,7 +19,7 @@
     "sw-precache-webpack-plugin": "^0.11.4"
   },
   "devDependencies": {
-    "avet-bin": "^0.2.0"
+    "avet-bin": "^0.4.1"
   },
   "author": "okoala <dapixp@gmail.com>",
   "engines": {

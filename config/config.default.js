@@ -3,7 +3,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 exports.pwa = {
   SWPrecacheOptions: {
     verbose: true,
-    staticFileGlobsIgnorePatterns: [/\.avet\//],
+    staticFileGlobsIgnorePatterns: [/\.avet\//, /asset-prod/],
     runtimeCaching: [
       {
         handler: 'networkFirst',
@@ -18,7 +18,6 @@ exports.build = {
     webpackConfig.plugins.push(
       new SWPrecacheWebpackPlugin(config.pwa.SWPrecacheOptions)
     )
-
     return webpackConfig;
   }
 }
