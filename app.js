@@ -6,6 +6,7 @@ module.exports = app => {
   const dist = app.config.build.distDir;
 
   app.use(function* (next) {
+    const ctx = this;
     const parsedUrl = parse(ctx.req.url, true);
     const { pathname } = parsedUrl;
 

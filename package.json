@@ -19,7 +19,9 @@
     "sw-precache-webpack-plugin": "^0.11.4"
   },
   "devDependencies": {
-    "avet-bin": "^0.4.1"
+    "avet-bin": "^0.4.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "author": "okoala <dapixp@gmail.com>",
   "engines": {
