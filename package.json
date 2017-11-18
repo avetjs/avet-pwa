@@ -5,12 +5,7 @@
   "avetPlugin": {
     "name": "pwa"
   },
-  "keywords": [
-    "avet",
-    "avetPlugin",
-    "avet-plugin",
-    "pwa"
-  ],
+  "keywords": ["avet", "avetPlugin", "avet-plugin", "pwa"],
   "scripts": {
     "build": "avet-bin build",
     "prepublish": "avet-bin build"
@@ -19,7 +14,10 @@
     "sw-precache-webpack-plugin": "^0.11.4"
   },
   "devDependencies": {
-    "avet-bin": "^0.4.1",
+    "avet-bin": "^0.7.0",
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.10.0",
+    "eslint-config-avet": "^0.3.8",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
@@ -27,13 +25,10 @@
   "engines": {
     "node": ">= 8.0.0"
   },
-  "files": [
-    "config",
-    "page",
-    "extend",
-    "dist",
-    "app.js"
-  ],
+  "tnpm": {
+    "mode": "npm"
+  },
+  "files": ["config", "page", "extend", "dist", "app.js"],
   "ci": {
     "version": "8"
   },
